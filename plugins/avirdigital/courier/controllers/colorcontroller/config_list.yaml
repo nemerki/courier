@@ -1,0 +1,15 @@
+title: ColorController
+modelClass: Avirdigital\Courier\Models\Color
+list: $/avirdigital/courier/models/color/columns.yaml
+recordUrl: 'avirdigital/courier/colorcontroller/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: updated_at
+    direction: desc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

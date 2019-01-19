@@ -1,0 +1,5 @@
+title: ModelController
+modelClass: Avirdigital\Courier\Models\Mdl
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

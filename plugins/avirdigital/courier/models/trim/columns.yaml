@@ -1,0 +1,20 @@
+columns:
+    name:
+        label: 'avirdigital.courier::lang.all.name'
+        type: text
+        searchable: true
+        sortable: true
+    brand:
+        label: 'avirdigital.courier::lang.trim.brand'
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: brand
+    mdl:
+        label: 'avirdigital.courier::lang.trim.model'
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: mdl

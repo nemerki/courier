@@ -1,0 +1,10 @@
+name: ModelController
+form: $/avirdigital/courier/models/mdl/fields.yaml
+modelClass: Avirdigital\Courier\Models\Mdl
+defaultRedirect: avirdigital/courier/modelcontroller
+create:
+    redirect: 'avirdigital/courier/modelcontroller/update/:id'
+    redirectClose: avirdigital/courier/modelcontroller
+update:
+    redirect: avirdigital/courier/modelcontroller
+    redirectClose: avirdigital/courier/modelcontroller

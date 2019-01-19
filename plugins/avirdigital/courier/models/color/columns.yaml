@@ -1,0 +1,6 @@
+columns:
+    name:
+        label: 'avirdigital.courier::lang.all.name'
+        type: text
+        searchable: true
+        sortable: true

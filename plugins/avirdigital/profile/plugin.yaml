@@ -1,0 +1,6 @@
+plugin:
+    name: 'avirdigital.profile::lang.plugin.name'
+    description: 'avirdigital.profile::lang.plugin.description'
+    author: avirdigital
+    icon: oc-icon-user
+    homepage: ''

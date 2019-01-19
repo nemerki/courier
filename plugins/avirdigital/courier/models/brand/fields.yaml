@@ -1,0 +1,10 @@
+fields:
+    is_active:
+        label: 'avirdigital.courier::lang.all.status'
+        span: full
+        default: 1
+        type: switch
+    name:
+        label: 'avirdigital.courier::lang.all.name'
+        span: full
+        type: text

@@ -1,0 +1,5 @@
+title: DriverTypeController
+modelClass: Avirdigital\Courier\Models\Drivertype
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

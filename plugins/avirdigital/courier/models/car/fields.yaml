@@ -1,0 +1,42 @@
+fields:
+    is_active:
+        label: 'avirdigital.courier::lang.all.status'
+        span: full
+        default: 1
+        type: switch
+    brand:
+        label: 'avirdigital.courier::lang.car.brand'
+        nameFrom: name
+        descriptionFrom: description
+        emptyOption: Select
+        span: auto
+        type: relation
+    mdl:
+        label: 'avirdigital.courier::lang.car.modle'
+        nameFrom: name
+        descriptionFrom: description
+        emptyOption: Select
+        span: auto
+        type: relation
+    trim:
+        label: 'avirdigital.courier::lang.car.trim'
+        nameFrom: name
+        descriptionFrom: description
+        emptyOption: Select
+        span: auto
+        type: relation
+    color:
+        label: 'avirdigital.courier::lang.car.color'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        emptyOption: Select
+        type: relation
+    year:
+        label: 'avirdigital.courier::lang.car.year'
+        span: auto
+        type: text
+    car_number:
+        label: 'avirdigital.courier::lang.car.car_number'
+        span: auto
+        type: text

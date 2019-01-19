@@ -1,0 +1,14 @@
+fields:
+    is_active:
+        label: 'avirdigital.courier::lang.all.status'
+        span: full
+        default: 1
+        type: switch
+    name:
+        label: 'avirdigital.courier::lang.all.name'
+        span: auto
+        type: text
+    conversion:
+        label: 'avirdigital.courier::lang.drivertype.conversion'
+        span: auto
+        type: text

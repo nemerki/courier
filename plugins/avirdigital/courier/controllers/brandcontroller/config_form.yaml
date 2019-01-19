@@ -1,0 +1,10 @@
+name: BrandController
+form: $/avirdigital/courier/models/brand/fields.yaml
+modelClass: Avirdigital\Courier\Models\Brand
+defaultRedirect: avirdigital/courier/brandcontroller
+create:
+    redirect: 'avirdigital/courier/brandcontroller/update/:id'
+    redirectClose: avirdigital/courier/brandcontroller
+update:
+    redirect: avirdigital/courier/brandcontroller
+    redirectClose: avirdigital/courier/brandcontroller

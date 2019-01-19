@@ -1,0 +1,10 @@
+name: CarController
+form: $/avirdigital/courier/models/car/fields.yaml
+modelClass: Avirdigital\Courier\Models\Car
+defaultRedirect: avirdigital/courier/carcontroller
+create:
+    redirect: 'avirdigital/courier/carcontroller/update/:id'
+    redirectClose: avirdigital/courier/carcontroller
+update:
+    redirect: avirdigital/courier/carcontroller
+    redirectClose: avirdigital/courier/carcontroller

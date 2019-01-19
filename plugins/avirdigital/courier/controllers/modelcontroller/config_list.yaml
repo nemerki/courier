@@ -1,0 +1,15 @@
+title: ModelController
+modelClass: Avirdigital\Courier\Models\Mdl
+list: $/avirdigital/courier/models/mdl/columns.yaml
+recordUrl: 'avirdigital/courier/modelcontroller/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: updated_at
+    direction: desc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

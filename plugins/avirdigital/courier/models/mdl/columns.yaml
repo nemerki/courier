@@ -1,0 +1,13 @@
+columns:
+    name:
+        label: 'avirdigital.courier::lang.all.name'
+        type: text
+        searchable: true
+        sortable: true
+    brand:
+        label: 'avirdigital.courier::lang.model.brand'
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: brand

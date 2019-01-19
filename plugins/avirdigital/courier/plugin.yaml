@@ -1,0 +1,67 @@
+plugin:
+    name: 'avirdigital.courier::lang.plugin.name'
+    description: 'avirdigital.courier::lang.plugin.description'
+    author: avirdigital
+    icon: oc-icon-adjust
+    homepage: ''
+permissions:
+    courier:
+        tab: 'avirdigital.courier::lang.permission.courier'
+        label: 'avirdigital.courier::lang.permission.courier'
+    brand:
+        tab: 'avirdigital.courier::lang.permission.courier'
+        label: 'avirdigital.courier::lang.permission.brand'
+    model:
+        tab: 'avirdigital.courier::lang.permission.courier'
+        label: 'avirdigital.courier::lang.permission.model'
+    trim:
+        tab: 'avirdigital.courier::lang.permission.courier'
+        label: 'avirdigital.courier::lang.permission.trim'
+    car:
+        tab: 'avirdigital.courier::lang.permission.courier'
+        label: 'avirdigital.courier::lang.permission.car'
+    color:
+        tab: 'avirdigital.courier::lang.permission.courier'
+        label: 'avirdigital.courier::lang.permission.color'
+    drivertype:
+        tab: 'avirdigital.courier::lang.permission.courier'
+        label: 'avirdigital.courier::lang.permission.drivertype'
+navigation:
+    main-menu-courier:
+        label: 'avirdigital.courier::lang.menu.courier'
+        url: avirdigital/courier/brandcontroller
+        icon: icon-cab
+        permissions:
+            - courier
+        order: '99'
+        sideMenu:
+            side-menu-brand:
+                label: 'avirdigital.courier::lang.menu.brand'
+                url: avirdigital/courier/brandcontroller
+                icon: icon-umbrella
+                permissions:
+                    - brand
+            side-menu-model:
+                label: 'avirdigital.courier::lang.menu.model'
+                url: avirdigital/courier/modelcontroller
+                icon: icon-space-shuttle
+                permissions:
+                    - model
+            side-menu-trim:
+                label: 'avirdigital.courier::lang.menu.trim'
+                url: avirdigital/courier/trimcontroller
+                icon: icon-tint
+                permissions:
+                    - trim
+            side-menu-color:
+                label: 'avirdigital.courier::lang.menu.color'
+                url: avirdigital/courier/colorcontroller
+                icon: icon-paint-brush
+                permissions:
+                    - color
+            side-menu-drivertype:
+                label: 'avirdigital.courier::lang.menu.drivertype'
+                url: avirdigital/courier/drivertypecontroller
+                icon: icon-unsorted
+                permissions:
+                    - drivertype

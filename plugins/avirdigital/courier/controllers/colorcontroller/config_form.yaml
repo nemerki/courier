@@ -1,0 +1,10 @@
+name: ColorController
+form: $/avirdigital/courier/models/color/fields.yaml
+modelClass: Avirdigital\Courier\Models\Color
+defaultRedirect: avirdigital/courier/colorcontroller
+create:
+    redirect: 'avirdigital/courier/colorcontroller/update/:id'
+    redirectClose: avirdigital/courier/colorcontroller
+update:
+    redirect: avirdigital/courier/colorcontroller
+    redirectClose: avirdigital/courier/colorcontroller

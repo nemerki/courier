@@ -1,0 +1,311 @@
+title = "Add driver"
+url = "/add-driver"
+layout = "default"
+is_hidden = 0
+
+[AddDriver]
+
+[RecordList drivertype]
+modelClass = "Avirdigital\Courier\Models\Drivertype"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "sort_order"
+sortDirection = "asc"
+whereIsActive = 1
+==
+<div class="row">
+    <div class="col-lg-12">
+
+        <!--begin::Portlet-->
+        <div class="m-portlet">
+            <div class="m-portlet__head">
+                <div class="m-portlet__head-caption">
+                    <div class="m-portlet__head-title">
+												<span class="m-portlet__head-icon m--hide">
+													<i class="la la-gear"></i>
+												</span>
+                        <h3 class="m-portlet__head-text">
+                            {{ 'Add New Driver'|_ }}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <!--begin::Form-->
+            <form id="adddriver_form" class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed">
+                <div class="m-portlet__body">
+
+                    <div class="m-form__heading mt-4">
+                        <h3 class="m-form__heading-title">Customer Info:</h3>
+                    </div>
+                    <div class="form-group m-form__group row">
+                        <div class="col-lg-6">
+                            <label>{{ 'Name'|_ }}:</label>
+                            <input type="text" name="name" class="form-control m-input"
+                                   placeholder="{{ 'Enter name'|_ }}">
+
+                        </div>
+                        <div class="col-lg-6">
+                            <label>{{ 'Surname'|_ }}:</label>
+                            <input type="text" name="surname" class="form-control m-input"
+                                   placeholder="{{ 'Enter surname'|_ }}">
+                        </div>
+                    </div>
+                    <div class="form-group m-form__group row">
+                        <div class="col-lg-6">
+                            <label>{{ 'Email'|_ }}:</label>
+                            <input type="email" name="email" class="form-control m-input"
+                                   placeholder="{{ 'Enter email'|_ }}">
+
+                        </div>
+                        <div class="col-lg-6">
+                            <label>{{ 'Phone'|_ }}:</label>
+                            <input type="text" name="phone" class="form-control m-input"
+                                   placeholder="{{ 'Enter phone'|_ }}">
+
+                        </div>
+                    </div>
+                    <div class="form-group m-form__group row">
+
+                        <div class="col-lg-6">
+                            <label>{{ 'Driver Type'|_ }}:</label>
+
+
+                            <select class="form-control m-select2"  id="drivertype_id" name="drivertype_id">
+                                <option></option>
+                                {% for rec in drivertype.records %}
+                                    <option value="{{ rec.id }}">{{ rec.name }}</option>
+                                {% endfor %}
+
+
+                            </select>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-group m-form__group row">
+                        <div class="col-lg-6">
+                            <label for="exampleInputEmail1">Id Card Front</label>
+                            <div></div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="id_card_front" id="id_card_front">
+                                <label class="custom-file-label" for="id_card_front">{{ 'Choose file'|_ }}</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="exampleInputEmail1">Id Card Back</label>
+                            <div></div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="id_card_back" id="id_card_back">
+                                <label class="custom-file-label" for="id_card_back">{{ 'Choose file'|_ }}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-form__group row">
+                        <div class="col-lg-6">
+                            <label for="exampleInputEmail1">Driver license Front</label>
+                            <div></div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="driver_license_front"
+                                       id="driver_license_front">
+                                <label class="custom-file-label"
+                                       for="driver_license_front">{{ 'Choose file'|_ }}</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="exampleInputEmail1">Driver license Back</label>
+                            <div></div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="driver_license_back"
+                                       id="driver_license_back">
+                                <label class="custom-file-label" for="driver_license_back">{{ 'Choose file'|_ }}</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                   <div class="m-portlet__body">
+
+                    <div class="m-form__heading mt-4">
+                        <h3 class="m-form__heading-title">{{ 'Car Detail'|_ }}</h3>
+                    </div>
+
+                    <div class="form-group m-form__group row">
+
+                        <div class="col-lg-6">
+                            <label>{{ 'Brand'|_ }}:</label>
+                            <select class="form-control m-select2"  id="brand__select" name="brand_id">
+                               {% partial "selectOption"  partialsRecords = brands %}
+                            </select>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <label>{{ 'Model'|_ }}:</label>
+                            <select class="form-control m-select2"  id="mdl__select" name="mdl_id">
+                               {% partial "selectOption"  partialsRecords = mdls %}
+                            </select>
+                        </div>
+
+
+                    </div>
+                    <div class="form-group m-form__group row">
+
+                        <div class="col-lg-6">
+                            <label>{{ 'Trim'|_ }}:</label>
+                            <select class="form-control m-select2"  id="trim__select" name="trim_id">
+                               {% partial "selectOption"  partialsRecords = trims %}
+                            </select>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <label>{{ 'Color'|_ }}:</label>
+                            <select class="form-control m-select2"  id="color__select" name="color_id">
+                               {% partial "selectOption"  partialsRecords = colors %}
+                            </select>
+                        </div>
+                    </div>
+
+
+                       <div class="form-group m-form__group row">
+                           <div class="col-lg-6">
+                               <label>{{ 'Year'|_ }}:</label>
+                               <input type="text" name="year" class="form-control m-input"
+                                      placeholder="{{ 'Enter Year'|_ }}">
+
+                           </div>
+                           <div class="col-lg-6">
+                               <label>{{ 'Car number'|_ }}:</label>
+                               <input type="text" name="car_number" class="form-control m-input"
+                                      placeholder="{{ 'Enter Car number'|_ }}">
+
+                           </div>
+                       </div>
+
+
+                </div>
+
+
+
+
+
+
+
+                <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+                    <div class="m-form__actions m-form__actions--solid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <button type="button" id="sendAddDriverForm" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-secondary">Cancel</button>
+                            </div>
+                            <div class="col-lg-6 m--align-right">
+                                <button type="reset" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!--end::Form-->
+        </div>
+
+        <!--end::Portlet-->
+
+
+    </div>
+</div>
+
+{% put scripts %}
+    <!--begin::Page Scripts -->
+    <script src="{{ 'assets/demo/default/custom/crud/forms/widgets/select2.js'|theme }}"
+            type="text/javascript"></script>
+
+
+
+    <!--end::Page Scripts -->
+    <script>
+        $(document).ready(function () {
+            $("#drivertype_id").select2({
+                placeholder: "{{ 'Select Driver Type'|_ }}",
+                allowClear: true
+            });
+            $("#brand__select").select2({
+                placeholder: "{{ 'Select Brand'|_ }}",
+                allowClear: true
+            });
+            $("#mdl__select").select2({
+                placeholder: "{{ 'Select Model'|_ }}",
+                allowClear: true
+            });
+            $("#trim__select").select2({
+                placeholder: "{{ 'Select Trim'|_ }}",
+                allowClear: true
+            });
+            $("#color__select").select2({
+                placeholder: "{{ 'Select Color'|_ }}",
+                allowClear: true
+            });
+
+
+            $(document).on("change", "#brand__select", function (e) {
+
+                // console.log(e);
+                var brand_id = e.target.value;
+                // console.log(brand_id);
+                $.oc.stripeLoadIndicator.show();
+
+                $.request('onModel', {
+
+                    update: {"selectOption": '#mdl__select'},
+                    data: {brand_id: brand_id},
+                    complete: function () {
+                        $.oc.stripeLoadIndicator.hide()
+
+                    }
+
+
+                });
+            });
+            $(document).on("change", "#mdl__select", function (e) {
+
+                // console.log(e);
+                var mdl_id = e.target.value;
+                // console.log(mdl_id);
+                $.oc.stripeLoadIndicator.show();
+
+                $.request('onTrim', {
+
+                    update: {"selectOption": '#trim__select'},
+                    data: {mdl_id: mdl_id},
+                    complete: function () {
+                        $.oc.stripeLoadIndicator.hide()
+
+                    }
+
+
+                });
+            });
+
+            $(document).on('click', '#sendAddDriverForm', function (e) {
+                $.oc.stripeLoadIndicator.show();
+                $('#adddriver_form').request('onAddDriverSave', {
+                    files: true,
+                    complete: function () {
+                        $.oc.stripeLoadIndicator.hide()
+                    }
+                });
+            });
+        });
+    </script>
+
+
+{% endput %}

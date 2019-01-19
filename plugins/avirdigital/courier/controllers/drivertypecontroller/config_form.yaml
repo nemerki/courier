@@ -1,0 +1,10 @@
+name: DriverTypeController
+form: $/avirdigital/courier/models/drivertype/fields.yaml
+modelClass: Avirdigital\Courier\Models\Drivertype
+defaultRedirect: avirdigital/courier/drivertypecontroller
+create:
+    redirect: 'avirdigital/courier/drivertypecontroller/update/:id'
+    redirectClose: avirdigital/courier/drivertypecontroller
+update:
+    redirect: avirdigital/courier/drivertypecontroller
+    redirectClose: avirdigital/courier/drivertypecontroller

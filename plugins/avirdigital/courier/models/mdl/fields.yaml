@@ -1,0 +1,17 @@
+fields:
+    is_active:
+        label: 'avirdigital.courier::lang.all.status'
+        span: full
+        default: 1
+        type: switch
+    brand:
+        label: 'avirdigital.courier::lang.model.brand'
+        nameFrom: name
+        descriptionFrom: description
+        emptyOption: Select
+        span: auto
+        type: relation
+    name:
+        label: 'avirdigital.courier::lang.all.name'
+        span: auto
+        type: text

@@ -1,0 +1,10 @@
+name: TrimController
+form: $/avirdigital/courier/models/trim/fields.yaml
+modelClass: Avirdigital\Courier\Models\Trim
+defaultRedirect: avirdigital/courier/trimcontroller
+create:
+    redirect: 'avirdigital/courier/trimcontroller/update/:id'
+    redirectClose: avirdigital/courier/trimcontroller
+update:
+    redirect: avirdigital/courier/trimcontroller
+    redirectClose: avirdigital/courier/trimcontroller

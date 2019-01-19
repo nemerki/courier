@@ -1,0 +1,6 @@
+columns:
+    car_number:
+        label: 'avirdigital.courier::lang.car.car_number'
+        type: text
+        searchable: true
+        sortable: true
